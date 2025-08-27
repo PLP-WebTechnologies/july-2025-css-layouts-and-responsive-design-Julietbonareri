@@ -1,0 +1,112 @@
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: black;
+    }
+
+    header {
+      background: darkgrey;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+    }
+
+    /* NAVIGATION using Flexbox */
+    nav {
+      background: darkblue;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin: 0.5rem;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      background: teal;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background: teal;
+    }
+
+    
+    .container {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      gap: 1rem;
+      padding: 1rem;
+    }
+
+    main {
+      background:whitesmoke;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    aside {
+      background: gainsboro;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+
+    /* FLEXBOX for Cards inside Content */
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .card {
+      flex: 1 1 250px;
+      background: darkgreen;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    footer {
+      background: #2c3e50;
+      color:darkgreen;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+    /* MEDIA QUERIES */
+    @media (max-width: 900px) {
+      .container {
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
